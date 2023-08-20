@@ -35,7 +35,8 @@ if __name__ == "__main__":
         print(magazine.name())
 
     print("\nArticle Titles for Magazine 1:")
-    print(Magazine.article_titles("Magazine 1"))
+    for title in Magazine.article_titles("Magazine 1"):
+        print(title)
 
     print("\nContributing Authors for Magazine 1:")
     for contributor in Magazine.contributing_authors("Magazine 1"):
