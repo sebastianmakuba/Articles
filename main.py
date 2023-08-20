@@ -15,17 +15,28 @@ if __name__ == "__main__":
     article3 = author1.add_article(magazine2, "Article 3 by Author 1")
 
     # Test object relationships
-    print(article1.author().name())  # Output: Author 1
-    print(article1.magazine().name())  # Output: Magazine 1
+    print("Author:", article1.author().name())
+    print("Magazine:", article1.magazine().name())
+    
+    print("\nArticles by Author:")
+    for article in author1.articles():
+        print(article.title())
 
-    print(author1.articles())  # Output: [Article 1 by Author 1, Article 3 by Author 1]
-    print(author1.magazines())  # Output: [Magazine 1, Magazine 2]
+    print("\nMagazines contributed by Author:")
+    for magazine in author1.magazines():
+        print(magazine.name())
 
-    print(magazine1.contributors())  # Output: [Author 1, Author 2]
-    print(Magazine.all())  # Output: [Magazine 1, Magazine 2]
+    print("\nContributors for Magazine:")
+    for contributor in magazine1.contributors():
+        print(contributor.name())
 
-    print(Magazine.article_titles("Magazine 1"))  # Output: [Article 1 by Author 1, Article 2 by Author 2]
-    print(Magazine.contributing_authors("Magazine 1"))  # Output: []
+    print("\nAll Magazines:")
+    for magazine in Magazine.all():
+        print(magazine.name())
 
-    print(Magazine.article_titles("Magazine 2"))  # Output: [Article 3 by Author 1]
-    print(Magazine.contributing_authors("Magazine 2"))  # Output: [Author 1]
+    print("\nArticle Titles for Magazine 1:")
+    print(Magazine.article_titles("Magazine 1"))
+
+    print("\nContributing Authors for Magazine 1:")
+    for contributor in Magazine.contributing_authors("Magazine 1"):
+        print(contributor.name())
