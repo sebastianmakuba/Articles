@@ -1,6 +1,6 @@
-from Author import Author
-from Article import Article
-from Magazine import Magazine
+from lib.Author import Author
+from lib.Article import Article
+from lib.Magazine import Magazine
 
 if __name__ == "__main__":
     # Create authors, magazines, and articles

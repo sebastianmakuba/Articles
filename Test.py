@@ -1,7 +1,7 @@
 import unittest
-from Author import Author
-from Article import Article
-from Magazine import Magazine
+from lib.Author import Author
+from lib.Article import Article
+from lib.Magazine import Magazine
 
 class TestAuthorMethods(unittest.TestCase):
     def test_author_articles(self):
@@ -11,7 +11,6 @@ class TestAuthorMethods(unittest.TestCase):
         
         self.assertEqual(author.articles(), [article])
 
-    # Add more test cases for other methods
 
 if __name__ == "__main__":
     unittest.main()
